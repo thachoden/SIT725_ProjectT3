@@ -27,6 +27,7 @@ const bannerSchema = new mongoose.Schema(
   {
     collection: "banners",
     timestamps: true,
+    strict: "throw",
   }
 );
 

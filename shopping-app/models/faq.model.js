@@ -29,7 +29,7 @@ const faqSchema = new mongoose.Schema(
       },
     },
   },
-  { collection: "faq-questions" }
+  { collection: "faq-questions", timestamps: true, strict: "throw" }
 );
 
 module.exports = new mongoose.model("FAQsQuestion", faqSchema);

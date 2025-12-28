@@ -88,11 +88,12 @@ const productSchema = new mongoose.Schema(
     isActive: {
       type: Boolean,
       default: true,
-    }
+    },
   },
   {
     collection: "products",
     timestamps: true,
+    strict: "throw",
   }
 );
 

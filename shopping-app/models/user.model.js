@@ -51,13 +51,13 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       validate: {
-              validator: async function (value) {
-                const Role = mongoose.model("Roles");
-                const role = await Role.findOne({ role_id: value });
-                return role !== null;
-              },
-              message: "Invalid category ID",
-            },
+        validator: async function (value) {
+          const Role = mongoose.model("Roles");
+          const role = await Role.findOne({ role_id: value });
+          return role !== null;
+        },
+        message: "Invalid category ID",
+      },
       default: "user",
     },
     status: {
@@ -69,6 +69,7 @@ const userSchema = new mongoose.Schema(
   {
     collection: "users",
     timestamps: true,
+    strict: "throw",
   }
 );
 

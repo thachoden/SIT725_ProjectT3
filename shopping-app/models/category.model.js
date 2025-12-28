@@ -29,6 +29,7 @@ const productCategorySchema = new mongoose.Schema(
   {
     collection: "product-categories",
     timestamps: true,
+    strict: "throw",
   }
 );
 
@@ -56,6 +57,7 @@ const faqCategorySchema = new mongoose.Schema(
   {
     collection: "faqs-categories",
     timestamps: true,
+    strict: "throw",
   }
 );
 

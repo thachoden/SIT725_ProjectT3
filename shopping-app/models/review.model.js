@@ -46,7 +46,7 @@ const reviewSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { collection: "reviews", timestamps: true }
+  { collection: "reviews", timestamps: true, strict: "throw" }
 );
 
 module.exports = new mongoose.model("Review", reviewSchema);
