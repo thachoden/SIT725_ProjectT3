@@ -5,19 +5,25 @@ const path = require('path');
 
 const app = express();
 
-// Connect to MongoDB
+// database
 connectDB();
 
-app.use(express.json());
-// body parser
-app.use(express.urlencoded({ extended: true }));
-// Your routes and middlewares here
-
+// static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// routes
 const router = require('./routes/router');
 app.use('/', router);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
