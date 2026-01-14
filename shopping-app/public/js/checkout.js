@@ -121,7 +121,7 @@ formEl.addEventListener("submit", async (e) => {
     // store order info for confirmation page
     sessionStorage.setItem("lastOrder", JSON.stringify(result));
 
-    window.location.href = "/confirmation.html";
+    window.location.href = "/confirmation";
   }catch(err){
     console.error(err);
     showMsg("Checkout failed (mock). Please check your inputs.");
