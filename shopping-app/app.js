@@ -4,13 +4,6 @@ const connectDB = require("./config/db");
 const path = require("path");
 
 const app = express();
-const path = require("path");
-
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-
-const pageRoutes = require("./routes/pages.routes");
-app.use("/", pageRoutes);
 
 // database
 connectDB();
