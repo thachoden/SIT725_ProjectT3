@@ -142,7 +142,7 @@ async function handleRemove(productId) {
 }
 
 document.getElementById("checkoutBtn").addEventListener("click", () => {
-  window.location.href = "/checkout.html";
+  window.location.href = "/checkout";
 });
 
 async function apiAdd(productId) {
