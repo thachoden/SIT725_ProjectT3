@@ -87,3 +87,43 @@ if (searchInput) {
 }
 
 init();
+
+function bindFeedbackForm() {
+  const form = document.getElementById("faqFeedbackForm");
+  if (!form) return;
+
+  const status = document.getElementById("fbStatus");
+  const nameEl = document.getElementById("fbName");
+  const emailEl = document.getElementById("fbEmail");
+  const msgEl = document.getElementById("fbMessage");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "Submitting...";
+
+    try {
+      const payload = {
+        name: nameEl.value,
+        email: emailEl.value,
+        message: msgEl.value,
+      };
+
+      const res = await fetch("/api/faq-feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const json = await res.json();
+      if (!res.ok) throw new Error(json?.message || "Submit failed");
+
+      status.textContent = "Thanks! Your feedback has been sent ✅";
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      status.textContent = "Failed to submit. Please try again.";
+    }
+  });
+}
+
+bindFeedbackForm();

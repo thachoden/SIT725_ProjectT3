@@ -1,22 +1,31 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 
 const router = express.Router();
 
-// faq
-router.get('/faq', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'faq.html'));
+// ========= Controllers =========
+const faqController = require("../controllers/faq.controller");
+const faqFeedbackController = require("../controllers/faqFeedback.controller");
+
+// ========= Pages =========
+
+// FAQ page
+router.get("/faq", (_req, res) => {
+  res.sendFile(path.join(__dirname, "..", "views", "faq.html"));
 });
 
-// homepage.html
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'homepage.html'));
+// Homepage
+router.get("/", (_req, res) => {
+  res.sendFile(path.join(__dirname, "..", "views", "homepage.html"));
 });
 
 // ========= APIs =========
-const faqController = require('../controllers/faq.controller');
 
+// FAQs list
+router.get("/api/faqs", faqController.getFaqs);
 
-router.get('/api/faqs', faqController.getFaqs);
+// FAQ feedback (MongoDB)
+router.post("/api/faq-feedback", faqFeedbackController.createFaqFeedback);
+router.get("/api/faq-feedback", faqFeedbackController.getFaqFeedback);
 
 module.exports = router;
