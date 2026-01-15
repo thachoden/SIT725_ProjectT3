@@ -9,6 +9,7 @@ const connectDB = async () => {
   } catch (err) {
     //console.error('MongoDB connection error:', err.message);
     //process.exit(1); // Exit process with failure
+    //15/1/26 have to ignore error to allow access cart
     console.warn('MongoDB connection failed. Running in MOCK mode.');
     console.warn(err.message);
   }

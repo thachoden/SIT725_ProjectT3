@@ -1,4 +1,4 @@
-const cart = require("../models/cart.model");
+const cartService = require("../services/cart.service");
 
 // order ID（mock）
 function generateOrderId(){
@@ -11,6 +11,8 @@ function generateOrderId(){
 }
 
 exports.checkout = (req, res) => {
+  const cart = cartService.getCart();
+
   if (!cart.items || cart.items.length === 0) {
     return res.status(400).json({ error: "Cart is empty" });
   }
@@ -39,9 +41,7 @@ exports.checkout = (req, res) => {
     status: "CONFIRMED (MOCK)",
   };
 
-  // mock：initial empty cart after checkout
-  cart.items = [];
-  cart.totalPrice = 0;
+  cartService.clearCart();
 
   return res.status(200).json(confirmation);
 };

@@ -19,20 +19,8 @@ app.use(express.json());
 // static files (css/js/icons/images)
 app.use(express.static(path.join(__dirname, "public")));
 
-// page routes (EJS pages)
-const pageRoutes = require("./routes/pages.routes");
-app.use("/", pageRoutes);
-
-// API routes
-const cartRoutes = require("./routes/cart.routes");
-app.use("/api/cart", cartRoutes);
-
-const checkoutRoutes = require("./routes/checkout.routes");
-app.use("/api/checkout", checkoutRoutes);
-
-app.get("/api/cart-test", (req, res) => {
-  res.json({ ok: true });
-});
+const router = require("./routes/router");
+app.use("/", router);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
