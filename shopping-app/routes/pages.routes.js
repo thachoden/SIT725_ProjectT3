@@ -52,4 +52,8 @@ router.get("/confirmation", (req, res) => {
   res.render("confirmation");
 });
 
+app.get("/product", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "product.html"));
+});
+
 module.exports = router;
