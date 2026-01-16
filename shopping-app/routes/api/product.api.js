@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 
-const productsApi = require("../../controllers/products.controller");
+const productsApi = require("../../controllers/product.controller");
 const reviewsApi = require("../../controllers/reviews.controller");
 
 // GET /api/products
