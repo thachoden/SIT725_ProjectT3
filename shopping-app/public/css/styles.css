@@ -1,8 +1,8 @@
-/* ===== FONTS ===== */
 * {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
+/* ===== FONTS ===== */
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -109,7 +109,105 @@ nav a:hover {
   color: #007bff;
 }
 
-/* ===== CATEGORY STYLING ===== */
+/* ===== PRODUCT CARD STYLING ===== */
+
+.product-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-container h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.product-card {
+  display: inline-block;
+  width: calc(25% - 20px);
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0088ff;
+}
+
+.btn-add-cart {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
+
+/* ===== CATEGORY CARD STYLING ===== */
 /* Category Container */
 .category-container {
   display: flex;
@@ -121,7 +219,7 @@ nav a:hover {
 }
 
 /* Card Component */
-.card {
+.category-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,7 +229,7 @@ nav a:hover {
   background-color: white;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
-  padding: 20px;
+  padding: 40px;
   gap: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -139,13 +237,13 @@ nav a:hover {
   text-decoration: none;
 }
 
-.card:hover {
+.category-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);
   border-color: #d0d0d0;
 }
 
-.card-icon {
+.category-card-icon {
   width: 60px;
   height: 60px;
   display: flex;
@@ -177,7 +275,7 @@ nav a:hover {
 /* ===== FOOTER STYLING ===== */
 .footer-container {
   background-color: #0e7490;
-  padding-bottom: 20px;
+  padding: 40px;
 }
 
 .footer-content {

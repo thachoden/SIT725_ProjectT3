@@ -14,6 +14,9 @@ const productApi = require("./product.api");
 // FAQ APIs
 router.use("/faq", faqApi);
 
+// Product APIs
+router.use("/product", productApi);
+
 // Cart APIs
 router.use("/cart", cartApi);
 
