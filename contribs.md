@@ -9,15 +9,17 @@
 - Developed FAQ frontend UI and search interaction
 - Wrote and refined FAQ content and categories
 - Implemented FAQ feedback submission flow
+- Sprint 2:
 
 ## MINH THAC NGUYUEN
 - Sprint 1: 
-
+- Sprint 2:
 ## YULIN ZHUANG(YORI ZHUANG)
 - Sprint 1: 
-
+- Sprint 2:
 ## YUJIANG LAI
 - Sprint 1: 
-
+- Sprint 2:
 ## VIET HUY THAI
 - Sprint 1: 
+- Sprint 2:
