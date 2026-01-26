@@ -22,13 +22,6 @@ app.use(express.static(path.join(__dirname, "public")));
 const router = require("./routes");
 app.use("/", router);
 
-app.get("/api/student", (_req, res) => {
-  res.status(200).json({
-    studentName: "Thac Minh Nguyen",
-    studentId: "s223330914",
-  });
-});
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);

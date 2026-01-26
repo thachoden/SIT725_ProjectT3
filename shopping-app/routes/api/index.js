@@ -26,4 +26,11 @@ router.use("/checkout", checkoutApi);
 // Resource APIs
 router.use("/resource", resourceApi);
 
+router.get("/student", (_req, res) => {
+  res.status(200).json({
+    studentName: "Thac Minh Nguyen",
+    studentId: "s223330914",
+  });
+});
+
 module.exports = router;
