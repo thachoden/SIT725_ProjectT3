@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendBtn = document.getElementById('ai-send');
   const output = document.getElementById('ai-output');
 
+  [keywordsEl, styleEl, budgetEl].forEach(el => {
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') sendBtn.click();
+  });
+});
+
   document.querySelectorAll('.ai-chip').forEach(btn => {
     btn.addEventListener('click', () => {
       const kw = btn.getAttribute('data-kw');
