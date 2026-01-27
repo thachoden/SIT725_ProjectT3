@@ -102,7 +102,7 @@ http://localhost:5000/api/student
 http://localhost:5000/faq
 ```
 
-###Test case:
+### Test case:
 
 You can view a product by:
 1. Choosing a category card, all available products will be display.
@@ -121,6 +121,7 @@ docker compose down
 ---
 
 Feel free to reach out if you encounter any issues during setup!
+
 
 
 
