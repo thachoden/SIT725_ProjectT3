@@ -93,6 +93,20 @@ Keep your web browser open and go to these route to see if they return expected 
 http://localhost:5000
 ```
 
+- This flowing URL should return my name and ID in json format:
+```
+http://localhost:5000/api/student
+```
+- This flowing URL should return the FAQs page:
+```
+http://localhost:5000/faq
+```
+
+Test case:
+You can view a product by:
+1. Choosing a category card, all available products will be display.
+2. Click on the product card, you should be redirected to the details prduct page.
+--> If you able to perform these action, this indicated that all service in the app which include views, backend API, and databse have been properly dockerized.
 ---
 ## Troubleshooting
 
@@ -106,5 +120,6 @@ docker compose down
 ---
 
 Feel free to reach out if you encounter any issues during setup!
+
 
 
