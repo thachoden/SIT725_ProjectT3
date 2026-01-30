@@ -67,7 +67,8 @@ const PRODUCTS = [
     price: 499.99,
     image: "https://images.unsplash.com/photo-1602211844066-d3bb556e983b?...",
     categoryId: "sports",
-    shortDescription: "Professional sports shoes with advanced cushioning technology",
+    shortDescription:
+      "Professional sports shoes with advanced cushioning technology",
     fullDescription:
       "Engineered for peak performance, these professional sports shoes feature advanced cushioning technology and superior grip. The breathable mesh upper keeps your feet cool during intense workouts.",
     specifications: [
@@ -88,7 +89,8 @@ const PRODUCTS = [
     price: 89.99,
     image: "https://images.unsplash.com/photo-1580699228119-7be487b3137f?...",
     categoryId: "books",
-    shortDescription: "Timeless bestselling collection in premium hardcover format",
+    shortDescription:
+      "Timeless bestselling collection in premium hardcover format",
     fullDescription:
       "A timeless collection in premium hardcover format. These bestselling books feature beautiful cover designs and high-quality paper that enhances the reading experience. Perfect for collectors and book lovers.",
     specifications: [
@@ -127,9 +129,30 @@ const PRODUCTS = [
 ];
 
 const mockProducts = [
-  { id: 1, name: "Harry Potter The Complete Collection J.K Rowling 1 To 8 Book Set Kids NEW Books", price: 68.08, stock: 5, category: "Books, Music & Movies", image: "/images/harryPotterBookSet.webp" },
-  { id: 2, name: "Mens 2 Piece Suit Slim Fit Wedding Dinner Suit Business Casual Jacket & AU", price: 288.90, stock: 10, category: "Men's Clothing", image: "/images/dinnerSuit.webp" },
-  { id: 3, name: "JABULANI Football | OFFICIAL MATCH BALL | WORLD CUP 2010 SOCCER Ball Size 5", price: 45.99, stock: 2, category: "Sporting Goods", image: "/images/soccer_ball.webp" },
+  {
+    id: 1,
+    name: "Harry Potter The Complete Collection J.K Rowling 1 To 8 Book Set Kids NEW Books",
+    price: 68.08,
+    stock: 5,
+    category: "Books, Music & Movies",
+    image: "/images/harryPotterBookSet.webp",
+  },
+  {
+    id: 2,
+    name: "Mens 2 Piece Suit Slim Fit Wedding Dinner Suit Business Casual Jacket & AU",
+    price: 288.9,
+    stock: 10,
+    category: "Men's Clothing",
+    image: "/images/dinnerSuit.webp",
+  },
+  {
+    id: 3,
+    name: "JABULANI Football | OFFICIAL MATCH BALL | WORLD CUP 2010 SOCCER Ball Size 5",
+    price: 45.99,
+    stock: 2,
+    category: "Sporting Goods",
+    image: "/images/soccer_ball.webp",
+  },
 ];
 const BANNERS = [
   {
@@ -294,7 +317,7 @@ const REVIEWS = [
   {
     review_id: 8,
     product_id: 4,
-    user_id: "user_008",
+    user_id: "user_007",
     rating: 5,
     comment:
       "Great shoes for the price. Very lightweight and the grip is fantastic.",
@@ -302,7 +325,7 @@ const REVIEWS = [
   {
     review_id: 9,
     product_id: 5,
-    user_id: "user_009",
+    user_id: "user_002",
     rating: 5,
     comment:
       "Beautiful collector's edition. The hardcover and paper quality are outstanding.",
@@ -310,7 +333,7 @@ const REVIEWS = [
   {
     review_id: 10,
     product_id: 6,
-    user_id: "user_010",
+    user_id: "user_003",
     rating: 5,
     comment:
       "My skin has never looked better! This set is worth every penny. All natural and gentle.",
@@ -318,7 +341,7 @@ const REVIEWS = [
   {
     review_id: 11,
     product_id: 6,
-    user_id: "user_011",
+    user_id: "user_005",
     rating: 4,
     comment:
       "Great products! Noticed improvement in my skin within 2 weeks. The serum is my favorite.",
@@ -339,7 +362,7 @@ const USERS = [
   {
     user_id: "user_002",
     name: "Viet",
-    email: "emily.chen@example.com",
+    email: "viet@example.com",
     password: "1",
     dob: new Date("2007-07-22"),
     phone: "5552345678",
@@ -349,7 +372,7 @@ const USERS = [
   {
     user_id: "user_003",
     name: "Yujiang",
-    email: "michael.brown@example.com",
+    email: "yujiangn@example.com",
     password: "1",
     dob: new Date("2006-11-08"),
     phone: "5553456789",
@@ -378,9 +401,9 @@ const USERS = [
   },
   {
     user_id: "user_006",
-    name: "Jessica Martinez",
-    email: "jessica.martinez@example.com",
-    password: "$2b$10$abcdefghijklmnopqrstuvwxyz",
+    name: "Test User",
+    email: "user@example.com",
+    password: "1",
     dob: new Date("2009-01-25"),
     phone: "5556789012",
     role: "user",
@@ -388,52 +411,12 @@ const USERS = [
   },
   {
     user_id: "user_007",
-    name: "Chris Wilson",
-    email: "chris.wilson@example.com",
-    password: "$2b$10$abcdefghijklmnopqrstuvwxyz",
+    name: "Admin",
+    email: "admin@example.com",
+    password: "1",
     dob: new Date("2006-06-18"),
     phone: "5557890123",
-    role: "user",
-    status: "active",
-  },
-  {
-    user_id: "user_008",
-    name: "Ryan Taylor",
-    email: "ryan.taylor@example.com",
-    password: "$2b$10$abcdefghijklmnopqrstuvwxyz",
-    dob: new Date("2008-12-03"),
-    phone: "5558901234",
-    role: "user",
-    status: "active",
-  },
-  {
-    user_id: "user_009",
-    name: "Jennifer White",
-    email: "jennifer.white@example.com",
-    password: "$2b$10$abcdefghijklmnopqrstuvwxyz",
-    dob: new Date("2007-04-14"),
-    phone: "5559012345",
-    role: "user",
-    status: "active",
-  },
-  {
-    user_id: "user_010",
-    name: "Amanda Garcia",
-    email: "amanda.garcia@example.com",
-    password: "$2b$10$abcdefghijklmnopqrstuvwxyz",
-    dob: new Date("2009-08-20"),
-    phone: "5550123456",
-    role: "user",
-    status: "active",
-  },
-  {
-    user_id: "user_011",
-    name: "Lisa Anderson",
-    email: "lisa.anderson@example.com",
-    password: "$2b$10$abcdefghijklmnopqrstuvwxyz",
-    dob: new Date("2008-10-07"),
-    phone: "5551112223",
-    role: "user",
+    role: "admin",
     status: "active",
   },
 ];
@@ -517,8 +500,7 @@ const FAQS = [
   {
     faq_id: 1011,
     question: "Do you ship internationally?",
-    answer:
-      "International shipping is available to selected countries.",
+    answer: "International shipping is available to selected countries.",
     category: "shipping",
   },
   {
@@ -538,15 +520,13 @@ const FAQS = [
   {
     faq_id: 1014,
     question: "What should I do if I receive a damaged product?",
-    answer:
-      "Please contact customer support within 24 hours of delivery.",
+    answer: "Please contact customer support within 24 hours of delivery.",
     category: "returns",
   },
   {
     faq_id: 1015,
     question: "I forgot my password. What should I do?",
-    answer:
-      "Click the Forgot Password link on the login page.",
+    answer: "Click the Forgot Password link on the login page.",
     category: "account",
   },
   {
@@ -559,8 +539,7 @@ const FAQS = [
   {
     faq_id: 1017,
     question: "Why is the website loading slowly?",
-    answer:
-      "Slow loading may be caused by network issues or high traffic.",
+    answer: "Slow loading may be caused by network issues or high traffic.",
     category: "technical",
   },
   {
@@ -573,8 +552,7 @@ const FAQS = [
   {
     faq_id: 1019,
     question: "How is my personal data protected?",
-    answer:
-      "We follow strict data protection policies.",
+    answer: "We follow strict data protection policies.",
     category: "security",
   },
   {
@@ -591,7 +569,7 @@ module.exports = {
   BANNERS,
   PRODUCT_CATEGORIES,
   FAQ_CATEGORIES,
-  FAQS,       
+  FAQS,
   REVIEWS,
   USERS,
   ROLES,
