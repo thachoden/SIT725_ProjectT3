@@ -11,6 +11,8 @@ const productApi = require("./product.api");
 const authApi = require("./auth/auth.api");
 const accountApi = require("./account.api");
 const adminApi = require("./admin.api");
+const aiController = require('../../controllers/ai.controller');
+
 
 // ========= API Route Mounting =========
 
@@ -53,5 +55,6 @@ router.get("/session", (req, res) => {
   }
 });
 
+router.post('/ai/recommend', express.json(), aiController.recommend);
 
 module.exports = router;
