@@ -1,22 +1,10 @@
 // shopping-app/controllers/account.controller.js
 
-// NOTE: This controller is MOCK data now.
-// Later we will replace mock user with real user from DB/session.
-
-function getMockUser() {
-  return {
-    firstName: "John",
-    lastName: "Doe",
-    email: "john.doe@email.com",
-    address: "123 Collins Street, Melbourne",
-  };
-}
-
 function renderProfilePage(req, res) {
   return res.render("account", {
     title: "My Account",
     activePage: "profile",
-    user: getMockUser(),
+    user: req.session?.user || null  ,
     bannerError: null,
     fieldErrors: null,
     form: null,
@@ -28,14 +16,7 @@ function renderAddressPage(req, res) {
   return res.render("account-address", {
     title: "Address Book",
     activePage: "address",
-    user: { firstName: "John", lastName: "Doe" },
-    address: {
-      line1: "123 Collins Street",
-      city: "Melbourne",
-      state: "VIC",
-      postcode: "3000",
-      country: "Australia",
-    },
+    user: req.session?.user || null
   });
 }
 
@@ -43,8 +24,7 @@ function renderPaymentPage(req, res) {
   return res.render("account-payment", {
     title: "My Payment Options",
     activePage: "payment",
-    user: { firstName: "John", lastName: "Doe" },
-    payment: { type: "Card", last4: "1234", name: "John Doe", expiry: "12/34" },
+    user: req.session?.user || null
   });
 }
 

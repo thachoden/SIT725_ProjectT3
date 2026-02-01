@@ -48,7 +48,7 @@
           <div class="account-header">
             <h2>Edit Your Profile</h2>
             <p class="welcome">
-              Welcome! <span class="name"><%= (user && user.firstName) ? user.firstName : "User" %></span>
+              Welcome! <span class="name"><%= user.name%></span>
             </p>
           </div>
 
@@ -72,29 +72,16 @@
           <div class="profile-card">
             <form class="profile-form" method="POST" action="/account/update" novalidate>
               <div class="form-grid">
-                <div class="form-group">
-                  <label>First Name</label>
+                <div class="form-group full">
+                  <label>Full Name</label>
                   <input
                     type="text"
-                    name="firstName"
-                    value="<%= (form && form.firstName) ? form.firstName : (user ? user.firstName : '') %>"
-                    class="<%= (fieldErrors && fieldErrors.firstName) ? 'input-error' : '' %>"
+                    name="fullName"
+                    value="<%= (form && form.fullName) ? form.fullName : (user ? user.name : '') %>"
+                    class="<%= (fieldErrors && fieldErrors.fullName) ? 'input-error' : '' %>"
                   />
-                  <% if (fieldErrors && fieldErrors.firstName) { %>
-                    <small class="field-error"><%= fieldErrors.firstName %></small>
-                  <% } %>
-                </div>
-
-                <div class="form-group">
-                  <label>Last Name</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value="<%= (form && form.lastName) ? form.lastName : (user ? user.lastName : '') %>"
-                    class="<%= (fieldErrors && fieldErrors.lastName) ? 'input-error' : '' %>"
-                  />
-                  <% if (fieldErrors && fieldErrors.lastName) { %>
-                    <small class="field-error"><%= fieldErrors.lastName %></small>
+                  <% if (fieldErrors && fieldErrors.fullName) { %>
+                    <small class="field-error"><%= fieldErrors.fullName %></small>
                   <% } %>
                 </div>
 
@@ -108,19 +95,6 @@
                   />
                   <% if (fieldErrors && fieldErrors.email) { %>
                     <small class="field-error"><%= fieldErrors.email %></small>
-                  <% } %>
-                </div>
-
-                <div class="form-group full">
-                  <label>Address</label>
-                  <input
-                    type="text"
-                    name="address"
-                    value="<%= (form && form.address) ? form.address : (user ? user.address : '') %>"
-                    class="<%= (fieldErrors && fieldErrors.address) ? 'input-error' : '' %>"
-                  />
-                  <% if (fieldErrors && fieldErrors.address) { %>
-                    <small class="field-error"><%= fieldErrors.address %></small>
                   <% } %>
                 </div>
               </div>
