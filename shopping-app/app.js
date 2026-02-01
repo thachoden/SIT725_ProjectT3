@@ -4,8 +4,6 @@ const session = require('express-session');
 const connectDB = require("./config/db");
 const path = require("path");
 const app = express();
-const adminRoutes = require("./routes/admin.routes");
-const aiRoutes = require('./routes/ai.routes');
 
 // static files (css/js/icons/images)
 app.use(express.static(path.join(__dirname, "public")));
@@ -40,8 +38,7 @@ app.use((req, res, next) => {
 // routes
 const router = require("./routes");
 app.use("/", router);
-//ai 
-app.use('/', aiRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -3,6 +3,8 @@ const router = express.Router();
 
 const accountController = require("../controllers/account.controller");
 const adminFeedbackController = require("../controllers/adminFeedback.controller");
+const aiController = require('../controllers/ai.controller');
+
 
 const { requireUser, requireAdmin, checkAuth } = require('../middleware/auth');
 // ========= Pages =========
@@ -63,4 +65,12 @@ router.get("/admin/users", requireAdmin, (req, res) => res.render("admin/users")
 router.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
+
+// Page
+router.get('/ai', aiController.renderAiPage);
+
+// API
+router.post('/api/ai/recommend', express.json(), aiController.recommend);
+
+module.exports = router;
 module.exports = router;
