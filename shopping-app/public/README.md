@@ -1,1 +1,0 @@
-All icon is from here: https://www.flaticon.com/
