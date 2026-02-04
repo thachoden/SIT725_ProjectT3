@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <% const BASE = "/admin"; /* 如果你挂载的是 /faq/admin，就改成 "/faq/admin" */ %>
+  <% const BASE = "http://localhost:5000/api/admin"; /* 如果你挂载的是 /faq/admin，就改成 "/faq/admin" */ %>
 
   <div class="admin-container">
 
@@ -27,7 +27,7 @@
     <div class="admin-card">
       <h2>Filter & Search</h2>
 
-      <form method="GET" action="<%= BASE %>/feedbacks">
+      <form method="GET" action="admin/feedbacks">
         <input type="hidden" name="key" value="<%= key %>">
 
         <div class="admin-filters">
