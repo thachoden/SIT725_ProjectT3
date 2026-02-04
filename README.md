@@ -1,3 +1,97 @@
+# GoPick – Application Usage Guide(Finalised by Kexin Cheng)
+
+## 1. Environment Setup (Optional AI Mode)
+
+GoPick supports two running modes for the AI Shopping Assistant:
+
+### Option A: AI-enabled mode (with OpenAI API Key)
+If you have an OpenAI API key, you can enable the AI-powered shopping assistant.
+
+- The OpenAI API key should be entered via the terminal or environment variables.
+- To obtain an API key for this project, please email:
+  kexin cheng
+
+Once the API key is provided, the AI Shopping Assistant page will use AI-generated recommendations.
+
+### Option B: Local fallback mode (no OpenAI API Key)
+If no OpenAI API key is provided:
+- The system will automatically fall back to a local data-driven recommendation mode.
+- All core functionalities remain usable.
+- This mode is suitable for local testing and tutor demonstrations.
+
+---
+
+## 2. Start the Application
+
+From the `shopping-app` directory, run:
+
+npm start
+
+Then open your browser and access:
+
+http://localhost:5000
+
+---
+
+## 3. User Features
+
+### 1. Login & Signup
+- Users can register a new account or log in with an existing account.
+- Test user account:
+  Email: user@example.com
+  Password: 1
+
+### 2. Product Detail
+- Users can browse products and view detailed product information.
+
+### 3. Add to Cart
+- Products can be added to the shopping cart.
+- Cart contents can be reviewed and updated.
+
+### 4. Checkout
+- Users can proceed to checkout.
+- The system generates a simulated order (no real payment required).
+
+### 5. Manage Account Information
+- Logged-in users can view and manage their account information.
+
+### 6. FAQ Page – Search Questions
+- Users can browse FAQs.
+- Keyword-based search is supported to quickly locate relevant questions.
+
+### 7. FAQ Page – Submit Feedback
+- If users cannot find an answer, they can submit feedback via the FAQ page.
+- Feedback is stored in the database for admin review.
+
+### 8. AI Shopping Assistant
+- Users can access the AI Shopping Assistant page.
+- Supports both AI-enabled mode (with OpenAI API key) and local fallback mode.
+
+---
+
+## 4. Admin Features
+
+### 9. Admin Login
+- Admin users can log in using the following test account:
+  Email: admin@example.com
+  Password: 1
+
+### 10. Admin Management Panel
+After logging in as an admin, the admin panel allows:
+- Managing user accounts
+- Viewing and managing user feedback
+- Updating feedback status (e.g., pending, resolved)
+- Deleting feedback entries if required
+
+---
+
+## 5. Notes for Demonstration and Testing
+
+- No external services are strictly required to run the project.
+- AI functionality is optional and safely falls back to local mode if no API key is provided.
+- All major user and admin workflows can be demonstrated locally using `npm start`.
+
+
 # Application architecture (Designed by Thac Nguyen)
 ```
 └── 📁shopping-app						#Application folder
